@@ -1,0 +1,70 @@
+.TH PLANKTON-PHISH 1 "December 2024" "Plankton Tools" "Devious Commands Manual"
+
+.SH NAME
+plankton-phish \- automated email phishing scheme sender
+
+.SH SYNOPSIS
+.B plankton-phish
+.RB [ \-r ]
+.RB [ \-s ]
+.RB [ \-b ]
+.RB [ \-a ATTACHMENT ]
+.RB [ \-m MESSAGE ]
+.RB [ \-h ]
+
+.SH DESCRIPTION
+.B plankton-phish
+is a Devious(TM) command-line tool designed by Plankton to generate and send convincing phishing emails targeting Mr. Krabs, SpongeBob, or perhaps Squidward.
+
+.SH OPTIONS
+.TP
+.B \-r <RECIPIENT>
+Specifies the recipient’s email address. Example: mrkrabs@krustykrab.com.
+.TP
+.B \-s <SUBJECT>
+Sets the subject line of the email. Example: "URGENT: Krusty Krab Security Breach!"
+.TP
+.B \-b <BODY FILE>
+Provides the path to a text file containing the email body message. If omitted, a generic "You have won 1 million sand dollars (MONEY!!!)!" message will be used.
+.TP
+.B \-a <ATTACHMENT>
+Includes a malicious attachment disguised as something harmless, e.g., SecretFormulaInstructions.pdf.exe.
+.TP
+.B \-m <MESSAGE TEXT>
+Inline message text to use as the email body. Overrides \-b.
+.TP
+.B \-h
+Displays this help message.
+
+.SH EXAMPLES
+.PP
+Basic phishing email:
+.PP
+.EX
+plankton-phish -r mrkrabs@krustykrab.com -s "URGENT: Password Reset Required" -m "Click the link below to reset your password!"
+.EE
+.PP
+Email with attachment:
+.PP
+.EX
+plankton-phish -r spongebob@krustykrab.com -s "Employee Benefits Update" -a "ChumBucketDiscounts.pdf"
+.EE
+.PP
+Using a file for the body:
+.PP
+.EX
+plankton-phish -r squilliam@fancyson.com -s "Exclusive Fancy Deal" -b /tmp/phish_body.txt
+.EE
+
+.SH WARNING
+Only plankton can use this or your eyeballs will explode.
+
+.SH LIMITATIONS
+Only 59 emails can be sent out per day to evade spam detection. DO NOT EXCEED THIS LIMIT!!
+
+.SH SEE ALSO
+.B plankton-spy
+\- covert surveillance for formula retrieval.
+.B plankton-robot
+\- advanced robots for formula extraction.
+
